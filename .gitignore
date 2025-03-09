@@ -1,3 +1,9 @@
 node_modules
+build
 # Keep environment variables out of version control
 .env
+
+prisma/dev.db
+prisma/dev.db-journal
+
+.vscode
