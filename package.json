@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon --watch src src/server.ts",
     "build": "tsc -p tsconfig.json",
-    "start": "node build/server.js"
+    "start": "node build/server.js",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "Clement Catel",
