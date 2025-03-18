@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@fastify/cors": "^11.0.0",
     "@prisma/client": "^6.4.1",
     "@vercel/node": "^5.1.12",
     "bcrypt": "^5.1.1",
