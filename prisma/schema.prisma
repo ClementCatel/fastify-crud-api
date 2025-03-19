@@ -24,16 +24,16 @@ model Post {
   id        String   @id @default(cuid())
   content   String   @db.VarChar(200)
   createdAt DateTime @default(now())
-  author    User     @relation(fields: [authorId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
   authorId  String
   likes     Like[]
 }
 
 model Like {
   id      String   @id @default(cuid())
-  user    User     @relation(fields: [userId], references: [id])
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId  String
-  post    Post     @relation(fields: [postId], references: [id])
+  post    Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
   postId  String
   likedAt DateTime @default(now())
 
